@@ -20,49 +20,7 @@ def process_entity_batch(batch: list[str], alias_to_canonical: dict):
     Send a batch of entity names to Gemini to detect alias groups.
     Updates the alias_to_canonical dictionary in place.
     """
-    # prompt = (
-    #     "You are cleaning up entity names in a noisy knowledge graph.\n\n"
-    #     f"Here is a list of entity names:\n" +
-    #     "\n".join(f"- {e}" for e in batch) + "\n\n"
-    #     "Your task is to group together aliases that refer to the same real-world entity **with high confidence**.\n\n"
-    #     "For example:\n"
-    #     "[\"Albert Einstein\", \"A. Einstein\", \"Al. Einstein\"] → YES\n\n"
-    #     "Return your output in JSON using the schema:\n"
-    #     "[{\"canonical\": \"Albert Einstein\", \"aliases\": [\"A. Einstein\", \"Al. Einstein\"]}, ...]\n\n"
-    #     "Only return confident matches. Skip ambiguous or unrelated entries."
-    # )
-    # prompt = (
-    #     '''
-    # You are cleaning up entity names in a noisy knowledge graph.
-
-    # Here is a list of entity names:
-    # ''' + "\n".join(f"- {e}" for e in batch) + '''
-
-    # Your task is to group together aliases that refer to the same real-world entity **with very high confidence**.
-
-    # Instructions:
-    # - Only group names together when you are **absolutely confident** they refer to the **same unique real-world entity**.
-    # - The entities may belong to a wide range of categories (e.g., people, places, organizations, scientific terms, etc.).
-    # - **Do not group** entities if there is **any ambiguity or uncertainty**.
-    # - Prioritize **precision** over recall — it's better to omit a potential match than to include an incorrect one.
-
-    # Example:
-    # ["Albert Einstein", "A. Einstein", "Al. Einstein"] → YES
-
-    # Return your output in JSON using the following schema:
-    # [
-    # {
-    #     "canonical": "Albert Einstein",
-    #     "aliases": ["A. Einstein", "Al. Einstein"]
-    # }
-    # ]
-
-    # Guidelines:
-    # - Choose the most complete or widely used form as the canonical name.
-    # - Add only strongly matching variants to the aliases list.
-    # - Skip unrelated or uncertain entities entirely.
-    # '''
-    # )
+    
     prompt = (
     '''
     You are cleaning up entity names in a noisy knowledge graph.
