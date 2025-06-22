@@ -1,0 +1,659 @@
+{
+  "nodes": [
+    {
+      "id": "1940s"
+    },
+    {
+      "id": "AI"
+    },
+    {
+      "id": "Albert Einstein"
+    },
+    {
+      "id": "Ann Druyan"
+    },
+    {
+      "id": "BBC"
+    },
+    {
+      "id": "Berlin"
+    },
+    {
+      "id": "Bohr"
+    },
+    {
+      "id": "CERN"
+    },
+    {
+      "id": "CERN institute"
+    },
+    {
+      "id": "Carl Sagan"
+    },
+    {
+      "id": "Cornell"
+    },
+    {
+      "id": "Cornell Univ."
+    },
+    {
+      "id": "Cosmos"
+    },
+    {
+      "id": "Deutschland"
+    },
+    {
+      "id": "Dr. Kaku"
+    },
+    {
+      "id": "E. Teller"
+    },
+    {
+      "id": "Edwin Hubble"
+    },
+    {
+      "id": "Europe"
+    },
+    {
+      "id": "Fritz Haber"
+    },
+    {
+      "id": "Geneva"
+    },
+    {
+      "id": "Gen\u00e8ve"
+    },
+    {
+      "id": "Germany"
+    },
+    {
+      "id": "HST (Hubble Telescope)"
+    },
+    {
+      "id": "Harvard Univ."
+    },
+    {
+      "id": "Hubble Space Tel."
+    },
+    {
+      "id": "Hungarian-American physicist"
+    },
+    {
+      "id": "JPL"
+    },
+    {
+      "id": "Large Hadron Collider (LHC)"
+    },
+    {
+      "id": "Leo Szilard"
+    },
+    {
+      "id": "Lisa Randall"
+    },
+    {
+      "id": "M. Planck Institute"
+    },
+    {
+      "id": "Manhattan Project"
+    },
+    {
+      "id": "McCarthy era"
+    },
+    {
+      "id": "Michio Kaku"
+    },
+    {
+      "id": "N. Bohr"
+    },
+    {
+      "id": "NASA"
+    },
+    {
+      "id": "Nat Geo Channel"
+    },
+    {
+      "id": "NatGeo TV"
+    },
+    {
+      "id": "Nazi Germany"
+    },
+    {
+      "id": "Neil DeGrasse T."
+    },
+    {
+      "id": "Neil DeGrasse Tyson"
+    },
+    {
+      "id": "New York"
+    },
+    {
+      "id": "President Roosevelt"
+    },
+    {
+      "id": "Richard Feynman"
+    },
+    {
+      "id": "Robert Oppenheimer"
+    },
+    {
+      "id": "UNESCO"
+    },
+    {
+      "id": "US"
+    },
+    {
+      "id": "Voyager"
+    },
+    {
+      "id": "WWII"
+    },
+    {
+      "id": "Werner Heisenberg"
+    },
+    {
+      "id": "atomic research"
+    },
+    {
+      "id": "chemical"
+    },
+    {
+      "id": "deep-field images"
+    },
+    {
+      "id": "documentaries"
+    },
+    {
+      "id": "extra dimensions"
+    },
+    {
+      "id": "father of the atomic bomb"
+    },
+    {
+      "id": "field equations"
+    },
+    {
+      "id": "generations"
+    },
+    {
+      "id": "golden record"
+    },
+    {
+      "id": "interstellar missions"
+    },
+    {
+      "id": "lectures"
+    },
+    {
+      "id": "matrix mechanics"
+    },
+    {
+      "id": "multiverse"
+    },
+    {
+      "id": "music"
+    },
+    {
+      "id": "pale blue dot"
+    },
+    {
+      "id": "physicist"
+    },
+    {
+      "id": "producer"
+    },
+    {
+      "id": "quantum computing"
+    },
+    {
+      "id": "researcher"
+    },
+    {
+      "id": "science shows"
+    },
+    {
+      "id": "scientists"
+    },
+    {
+      "id": "string theory"
+    },
+    {
+      "id": "the public"
+    },
+    {
+      "id": "theoretical physics"
+    },
+    {
+      "id": "universe"
+    },
+    {
+      "id": "writer"
+    }
+  ],
+  "links": [
+    {
+      "source": "Werner Heisenberg",
+      "target": "Germany",
+      "label": "worked in"
+    },
+    {
+      "source": "Werner Heisenberg",
+      "target": "WWII",
+      "label": "worked during"
+    },
+    {
+      "source": "Albert Einstein",
+      "target": "N. Bohr",
+      "label": "debated"
+    },
+    {
+      "source": "CERN",
+      "target": "Large Hadron Collider (LHC)",
+      "label": "builds"
+    },
+    {
+      "source": "CERN",
+      "target": "Gen\u00e8ve",
+      "label": "based near"
+    },
+    {
+      "source": "Large Hadron Collider (LHC)",
+      "target": "Lisa Randall",
+      "label": "enabled"
+    },
+    {
+      "source": "Lisa Randall",
+      "target": "theoretical physics",
+      "label": "in"
+    },
+    {
+      "source": "Lisa Randall",
+      "target": "extra dimensions",
+      "label": "explore"
+    },
+    {
+      "source": "Hubble Space Tel.",
+      "target": "Edwin Hubble",
+      "label": "honor"
+    },
+    {
+      "source": "Edwin Hubble",
+      "target": "universe",
+      "label": "discovered"
+    },
+    {
+      "source": "Neil DeGrasse Tyson",
+      "target": "Cosmos",
+      "label": "hosted"
+    },
+    {
+      "source": "Cosmos",
+      "target": "NatGeo TV",
+      "label": "aired on"
+    },
+    {
+      "source": "science shows",
+      "target": "BBC",
+      "label": "produced by"
+    },
+    {
+      "source": "Lisa Randall",
+      "target": "Harvard Univ.",
+      "label": "from"
+    },
+    {
+      "source": "Lisa Randall",
+      "target": "the public",
+      "label": "to communicate to"
+    },
+    {
+      "source": "Lisa Randall",
+      "target": "Michio Kaku",
+      "label": "collaborated with"
+    },
+    {
+      "source": "Lisa Randall",
+      "target": "physicist",
+      "label": "collaborated with"
+    },
+    {
+      "source": "Lisa Randall",
+      "target": "researcher",
+      "label": "is a"
+    },
+    {
+      "source": "Lisa Randall",
+      "target": "science shows",
+      "label": "appeared on"
+    },
+    {
+      "source": "Michio Kaku",
+      "target": "science shows",
+      "label": "appeared on"
+    },
+    {
+      "source": "Michio Kaku",
+      "target": "the public",
+      "label": "to communicate to"
+    },
+    {
+      "source": "physicist",
+      "target": "Michio Kaku",
+      "label": "is"
+    },
+    {
+      "source": "Werner Heisenberg",
+      "target": "matrix mechanics",
+      "label": "contributed to"
+    },
+    {
+      "source": "Werner Heisenberg",
+      "target": "Bohr",
+      "label": "guided by"
+    },
+    {
+      "source": "CERN institute",
+      "target": "Geneva",
+      "label": "near"
+    },
+    {
+      "source": "Carl Sagan",
+      "target": "generations",
+      "label": "inspired"
+    },
+    {
+      "source": "Carl Sagan",
+      "target": "lectures",
+      "label": "through"
+    },
+    {
+      "source": "lectures",
+      "target": "Cornell",
+      "label": "at"
+    },
+    {
+      "source": "Carl Sagan",
+      "target": "pale blue dot",
+      "label": "conveying"
+    },
+    {
+      "source": "scientists",
+      "target": "Carl Sagan",
+      "label": "like"
+    },
+    {
+      "source": "HST (Hubble Telescope)",
+      "target": "deep-field images",
+      "label": "captured"
+    },
+    {
+      "source": "deep-field images",
+      "target": "scientists",
+      "label": "aiding"
+    },
+    {
+      "source": "Neil DeGrasse T.",
+      "target": "New York",
+      "label": "in"
+    },
+    {
+      "source": "Neil DeGrasse T.",
+      "target": "Dr. Kaku",
+      "label": "debated with"
+    },
+    {
+      "source": "Dr. Kaku",
+      "target": "Albert Einstein",
+      "label": "explained"
+    },
+    {
+      "source": "Dr. Kaku",
+      "target": "multiverse",
+      "label": "suggested"
+    },
+    {
+      "source": "Dr. Kaku",
+      "target": "field equations",
+      "label": "explained"
+    },
+    {
+      "source": "Dr. Kaku",
+      "target": "string theory",
+      "label": "in context of"
+    },
+    {
+      "source": "Richard Feynman",
+      "target": "Robert Oppenheimer",
+      "label": "worked alongside"
+    },
+    {
+      "source": "Richard Feynman",
+      "target": "E. Teller",
+      "label": "worked alongside"
+    },
+    {
+      "source": "Richard Feynman",
+      "target": "Manhattan Project",
+      "label": "worked on"
+    },
+    {
+      "source": "Robert Oppenheimer",
+      "target": "1940s",
+      "label": "during"
+    },
+    {
+      "source": "Manhattan Project",
+      "target": "1940s",
+      "label": "during"
+    },
+    {
+      "source": "E. Teller",
+      "target": "1940s",
+      "label": "during"
+    },
+    {
+      "source": "Nat Geo Channel",
+      "target": "documentaries",
+      "label": "featured"
+    },
+    {
+      "source": "documentaries",
+      "target": "Richard Feynman",
+      "label": "on"
+    },
+    {
+      "source": "Carl Sagan",
+      "target": "NASA",
+      "label": "worked at"
+    },
+    {
+      "source": "Carl Sagan",
+      "target": "JPL",
+      "label": "worked at"
+    },
+    {
+      "source": "Voyager",
+      "target": "golden record",
+      "label": "had"
+    },
+    {
+      "source": "golden record",
+      "target": "music",
+      "label": "had"
+    },
+    {
+      "source": "Cornell Univ.",
+      "target": "Carl Sagan",
+      "label": "mentored"
+    },
+    {
+      "source": "JPL",
+      "target": "Voyager",
+      "label": "worked on"
+    },
+    {
+      "source": "JPL",
+      "target": "interstellar missions",
+      "label": "worked on"
+    },
+    {
+      "source": "Ann Druyan",
+      "target": "music",
+      "label": "selected"
+    },
+    {
+      "source": "Ann Druyan",
+      "target": "Carl Sagan",
+      "label": "married"
+    },
+    {
+      "source": "Ann Druyan",
+      "target": "Cosmos",
+      "label": "co-created"
+    },
+    {
+      "source": "Ann Druyan",
+      "target": "producer",
+      "label": "producer"
+    },
+    {
+      "source": "Ann Druyan",
+      "target": "writer",
+      "label": "writer"
+    },
+    {
+      "source": "Ann Druyan",
+      "target": "Neil DeGrasse Tyson",
+      "label": "co-created"
+    },
+    {
+      "source": "M. Planck Institute",
+      "target": "UNESCO",
+      "label": "collaborates with"
+    },
+    {
+      "source": "M. Planck Institute",
+      "target": "CERN",
+      "label": "collaborates with"
+    },
+    {
+      "source": "M. Planck Institute",
+      "target": "quantum computing",
+      "label": "researching"
+    },
+    {
+      "source": "M. Planck Institute",
+      "target": "Europe",
+      "label": "researching in"
+    },
+    {
+      "source": "M. Planck Institute",
+      "target": "Deutschland",
+      "label": "located in"
+    },
+    {
+      "source": "M. Planck Institute",
+      "target": "AI",
+      "label": "researching"
+    },
+    {
+      "source": "Leo Szilard",
+      "target": "Fritz Haber",
+      "label": "worked with"
+    },
+    {
+      "source": "Leo Szilard",
+      "target": "Berlin",
+      "label": "in"
+    },
+    {
+      "source": "Fritz Haber",
+      "target": "chemical",
+      "label": "developing"
+    },
+    {
+      "source": "Robert Oppenheimer",
+      "target": "Leo Szilard",
+      "label": "ties with"
+    },
+    {
+      "source": "Robert Oppenheimer",
+      "target": "father of the atomic bomb",
+      "label": "called"
+    },
+    {
+      "source": "Robert Oppenheimer",
+      "target": "Albert Einstein",
+      "label": "ties with"
+    },
+    {
+      "source": "Robert Oppenheimer",
+      "target": "McCarthy era",
+      "label": "faced trial during"
+    },
+    {
+      "source": "President Roosevelt",
+      "target": "Leo Szilard",
+      "label": "was urged by"
+    },
+    {
+      "source": "President Roosevelt",
+      "target": "Albert Einstein",
+      "label": "was urged by"
+    },
+    {
+      "source": "Leo Szilard",
+      "target": "Hungarian-American physicist",
+      "label": "is a"
+    },
+    {
+      "source": "Leo Szilard",
+      "target": "Albert Einstein",
+      "label": "co-authored a letter with"
+    },
+    {
+      "source": "Leo Szilard",
+      "target": "President Roosevelt",
+      "label": "urged"
+    },
+    {
+      "source": "Leo Szilard",
+      "target": "US",
+      "label": "urged"
+    },
+    {
+      "source": "Leo Szilard",
+      "target": "atomic research",
+      "label": "urged"
+    },
+    {
+      "source": "Albert Einstein",
+      "target": "US",
+      "label": "urged"
+    },
+    {
+      "source": "Albert Einstein",
+      "target": "President Roosevelt",
+      "label": "urged"
+    },
+    {
+      "source": "Albert Einstein",
+      "target": "Leo Szilard",
+      "label": "co-authored a letter with"
+    },
+    {
+      "source": "Albert Einstein",
+      "target": "atomic research",
+      "label": "urged"
+    },
+    {
+      "source": "US",
+      "target": "Nazi Germany",
+      "label": "ahead of"
+    },
+    {
+      "source": "US",
+      "target": "atomic research",
+      "label": "develop"
+    }
+  ]
+}

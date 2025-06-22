@@ -1,0 +1,118 @@
+html, body, #root, .app-container {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.graph-pane {
+  flex: 1;
+  position: relative;
+}
+
+.graph-pane canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.side-pane {
+  width: 250px;
+  background-color: #ffffff;  /* solid white */
+  border-left: 1px solid #ddd;
+  padding: 1rem;
+  overflow-y: auto;
+  opacity: 1;                 /* ensure no transparency */
+  z-index: 20;                /* sit above other elements, if needed */
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+} 
+
+.search-bar {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  background: white;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.search-bar input {
+  padding: 4px;
+  margin-right: 6px;
+}
+
+.search-bar button {
+  padding: 4px 8px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background: #0056b3;
+}
+
+.suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: white;
+  border: 1px solid #ddd;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 10;
+  width: 250px;
+}
+
+.suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.suggestions li:hover {
+  background-color: #f0f0f0;
+}
+.suggestions li.selected {
+  background-color: #007bff;
+  color: white;
+}
+.suggestions li.selected:hover {
+  background-color: #0056b3;
+}
+
+
+/* place this alongside your other styles */
+
+.mini-map {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #ddd;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  z-index: 15;           
+  pointer-events: none;  /* ← absolutely required */
+}
+

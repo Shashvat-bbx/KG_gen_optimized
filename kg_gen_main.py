@@ -6,13 +6,15 @@ import networkx as nx
 from pathlib import Path
 from dotenv import load_dotenv
 from kg_gen import KGGen
+import time
 
 # Load environment variables
 load_dotenv()
 
 # Load dataset
-df = pd.read_csv("Datasets/kg_dataset_small.csv", header=None)
-rows = df.iloc[:, 0].tolist()
+df= pd.read_csv("Datasets/kg_dataset_small.csv")
+# df = pd.read_parquet("Datasets/train-00000-of-00001.parquet" )
+rows = df.iloc[:, 0].tolist() # update the column according to the dataset csv
 
 # Initialize KG generator
 kg = KGGen(
@@ -23,14 +25,14 @@ kg = KGGen(
 # Directed knowledge graph
 G = nx.DiGraph()
 
-# Semaphore to limit concurrency to 50 tasks at a time
-semaphore = asyncio.Semaphore(50)
+# Semaphore to limit concurrency to 100 tasks at a time
+semaphore = asyncio.Semaphore(100)
 
 
 async def process_passage(idx, passage, G, kg):
     async with semaphore:
         print(f"\n📄 Processing entry {idx + 1}")
-        print("📖 Text Snippet:", passage[:200])
+        print("📖 Text Snippet:", passage[:])
 
         try:
             graph = await asyncio.to_thread(
@@ -57,6 +59,7 @@ async def process_passage(idx, passage, G, kg):
 
 
 async def main_async(rows, G, kg):
+
     tasks = [
         process_passage(idx, passage, G, kg)
         for idx, passage in enumerate(rows)
@@ -84,6 +87,10 @@ async def main_async(rows, G, kg):
     print(f"✅ Knowledge Graph saved to: {output_path.resolve()}")
 
 
-# Entry point
 if __name__ == "__main__":
+    start_time = time.time()
     asyncio.run(main_async(rows, G, kg))
+    end_time = time.time()
+
+    duration = end_time - start_time
+    print(f"\n⏱️ Total runtime: {duration:.2f} seconds")

@@ -11,3 +11,6 @@ wheels/
 
 # Environment API Secrets
 .env
+
+# Frontend_node modules
+kg-visualizer-react-frontend/node_modules

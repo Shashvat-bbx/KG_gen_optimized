@@ -1,3 +1,6 @@
 kg-gen
 pyvis
 asyncio
+pydantic
+google
+google.genai
