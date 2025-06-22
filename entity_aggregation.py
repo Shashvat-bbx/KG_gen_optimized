@@ -140,7 +140,7 @@ def main():
     # Save cleaned knowledge graph
     with open("outputs/cleaned_Aggregated_dataset_flash_lite.json", "w") as f:
         json.dump(cleaned_data, f, indent=2)
-    print("✅ Saved cleaned knowledge graph to outputs/cleaned_shashvat_dataset_flash_lite.json")
+    print("✅ Saved cleaned knowledge graph to outputs/cleaned_aggregated_final_dataset_flash_lite.json")
 
 # ---------------------- ENTRY POINT ----------------------
 if __name__ == "__main__":
