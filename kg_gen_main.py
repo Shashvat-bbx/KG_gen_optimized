@@ -78,7 +78,7 @@ async def main_async(rows, G, kg):
         ]
     }
 
-    output_path = Path("outputs/shashvat_dataset_flash_lite.json")
+    output_path = Path("outputs/kg_result_gemini_flash_lite.json")
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with open(output_path, "w") as f:
