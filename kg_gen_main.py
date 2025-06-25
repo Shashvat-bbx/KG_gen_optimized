@@ -1,8 +1,10 @@
 import os
 import json
 import asyncio
+import re
 import pandas as pd
 import networkx as nx
+from pyvis.network import Network
 from pathlib import Path
 from dotenv import load_dotenv
 from kg_gen import KGGen
@@ -14,7 +16,7 @@ load_dotenv()
 # Load dataset
 df= pd.read_csv("Datasets/kg_dataset_small.csv")
 # df = pd.read_parquet("Datasets/train-00000-of-00001.parquet" )
-rows = df.iloc[:, 0].tolist() # update the column according to the dataset csv
+rows = df.iloc[:1, 0].tolist() # update the column according to the dataset csv
 
 # Initialize KG generator
 kg = KGGen(
@@ -56,7 +58,23 @@ async def process_passage(idx, passage, G, kg):
         except Exception as e:
             print(f"❌ Error in entry {idx + 1}: {e}")
             return 0
+def pyvis(G):
+    net = Network(height="750px", width="100%", directed=True, notebook=False)
+    net.from_nx(G)
+    net.toggle_physics(True)
 
+    # Generate the full HTML
+    html = net.generate_html(notebook=False)
+
+    # Remove the top toolbar div that overlaps/interferes
+    html = re.sub(r'<div id="toolbar">.*?</div>', '', html, flags=re.S)
+
+    # Write out clean HTML
+    output_path = "outputs/custom_dataset_gpt_nano.html"
+    with open(output_path, "w") as f:
+        f.write(html)
+
+    print(f"Standalone PyVis visualization saved to {output_path}")
 
 async def main_async(rows, G, kg):
 
@@ -85,6 +103,7 @@ async def main_async(rows, G, kg):
         json.dump(graph_data, f, indent=2)
 
     print(f"✅ Knowledge Graph saved to: {output_path.resolve()}")
+    pyvis(G)
 
 
 if __name__ == "__main__":
