@@ -27,7 +27,7 @@ export default function App() {
 
 
   useEffect(() => {
-    fetch("/cleaned_shashvat_dataset_flash_lite.json")
+    fetch("../public/Output_dataset_kg_openai_gpt_nano.json")
       .then((res) => res.json())
       .then((json) => {
         json.nodes.forEach(node => {

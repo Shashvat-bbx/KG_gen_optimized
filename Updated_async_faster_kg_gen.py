@@ -1,8 +1,10 @@
 import os
 import json
 import asyncio
+import re
 import pandas as pd
 import networkx as nx
+from pyvis.network import Network
 from pathlib import Path
 from dotenv import load_dotenv
 from kg_gen import KGGen
@@ -12,13 +14,13 @@ import time
 load_dotenv()
 
 # Load dataset
-df = pd.read_parquet("Datasets/train-00000-of-00001.parquet")
-rows = df.iloc[:, 1].tolist()  # adjust column index as needed
+df = pd.read_csv("Datasets/Custom_test_dataset_original.csv")
+rows = df.iloc[:100, 0].tolist()  # adjust column index as needed
 
 # Initialize KG generator
 kg = KGGen(
-    model="gemini/gemini-2.0-flash-lite",
-    api_key=os.getenv("GOOGLE_API_KEY")
+    model="gpt-4.1-nano",
+    api_key=os.getenv("OPENAI_API_KEY")
 )
 
 # Directed knowledge graph
@@ -67,7 +69,23 @@ async def process_passage(idx, passage, G, kg):
             print(f"❌ Error in entry {idx + 1}: {e}")
             print(f"✅ Completed {completed_count} of {len(rows)} (with errors)")
         return 0
+def pyvis(G):
+    net = Network(height="750px", width="100%", directed=True, notebook=False)
+    net.from_nx(G)
+    net.toggle_physics(True)
 
+    # Generate the full HTML
+    html = net.generate_html(notebook=False)
+
+    # Remove the top toolbar div that overlaps/interferes
+    html = re.sub(r'<div id="toolbar">.*?</div>', '', html, flags=re.S)
+
+    # Write out clean HTML
+    output_path = "outputs/custom_dataset_gpt_nano.html"
+    with open(output_path, "w") as f:
+        f.write(html)
+
+    print(f"Standalone PyVis visualization saved to {output_path}")
 
 async def main_async(rows, G, kg):
     tasks = [
@@ -88,13 +106,14 @@ async def main_async(rows, G, kg):
         ]
     }
 
-    output_path = Path("outputs/shashvat_dataset_flash_lite.json")
+    output_path = Path("outputs/Custom_dataaset_kg_openai_gpt_nano.json")
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with open(output_path, "w") as f:
         json.dump(graph_data, f, indent=2)
 
     print(f"✅ Knowledge Graph saved to: {output_path.resolve()}")
+    pyvis(G)
 
 
 if __name__ == "__main__":

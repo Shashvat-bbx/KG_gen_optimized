@@ -25,8 +25,7 @@ def process_entity_batch(batch: list[str], alias_to_canonical: dict):
     '''
     You are cleaning up entity names in a noisy knowledge graph.
 
-    Here is a list of entity names:
-    ''' + "\n".join(f"- {e}" for e in batch) + '''
+    
 
     Your task is to identify and group names that clearly refer to the **same real-world entity**. Only do this if you are **absolutely confident** that the names refer to the **exact same thing** — not just similar or related entities.
 
@@ -56,6 +55,8 @@ def process_entity_batch(batch: list[str], alias_to_canonical: dict):
         "aliases": ["A. Einstein", "Al. Einstein"]
     }
 ]'''
+    "Here is a list of entity names:"
+    ''' + "\n".join(f"- {e}" for e in batch) + '''
     ) 
 
 

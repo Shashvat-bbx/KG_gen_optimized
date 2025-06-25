@@ -16,7 +16,7 @@ rows = df.iloc[:, 0].tolist()  # adjust column index if needed
 
 # Initialize KG generator
 kg = KGGen(
-    model="ollama_chat/llama3",
+    model="ollama_chat/llama3",       # set the downloaded model
     api_base=os.getenv("http://localhost:11434")
 )
 
@@ -67,7 +67,7 @@ graph_data = {
     ]
 }
 
-output_path = Path("outputs/shashvat_dataset_ollama.json")
+output_path = Path("outputs/KG_Output_from_ollama.json")
 output_path.parent.mkdir(parents=True, exist_ok=True)
 
 with open(output_path, "w") as f:
